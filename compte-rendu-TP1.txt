@@ -1,0 +1,31 @@
+INSTALLATION DE COMPOSER 
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+sudo php composer-setup.php --filename=composer --install-dir=<emplacement>
+(dans TP1, <emplacement> = /usr/local/bin)
+CREATION DE PROJET
+composer create-project --prefer-dist laravel/laravel <nom du projet>
+LANCEMENT DE SERVER VIA ARTISAN
+php artisan serve 
+(similaire à php -S localhost:8000)
+CREATION DE ROUTE
+Route::get('/<mot-clé url>', function(){
+   //affichage d'une vue
+   return view (<nom vue>)
+   //ou d'un texte
+   return <texte>
+}
+CREATION D'UN CONTROLEUR
+php artisan make:controller <nom controleur>
+
+RECUPERATION DE VARS SUR BLADE
+{{ $<nomvar>}}
+exemple : <h1>Bonjour {{$name}}</h1>
+
+CONDITIONS AVEC BLADE
+@if (...)
+
+@else (...)
+
+@endif
+
+/!\ pas besoin de {{}} pour les variables.
