@@ -30,3 +30,6 @@ Route::get('/', [HomeController::class, 'index']);
 
 use App\Http\Controllers\AboutController;
 Route::get('/about', [AboutController::class, 'index']);
+
+use App\Http\Controllers\ClientsController;
+Route::get('/clients', [ClientsController::class, 'index']);

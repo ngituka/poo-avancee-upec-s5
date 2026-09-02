@@ -32,11 +32,6 @@
     <p>Commandes : {{ $orders }}</p>
     <p>Ville : {{ $city }}</p>
 
-    <p><b>Clients : </b></p>
-    @foreach($clients as $client)
-        <p>{{ $client }}</p>
-    @endforeach
-
     @if ($nbproducts>0)
         <p><b>Produits :</b></p>
         <ul>
