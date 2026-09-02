@@ -18,7 +18,16 @@
         <option value="spider">Araignée</option>
     </select>
 
-    <p>Clients : {{ $clients }}</p>
+    @if($clients > 0)
+        <p>Vous avez des clients.</p>
+    @else
+        <p>Aucun client.</p>
+    @endif
+    @if($stock < 5)
+        <p>Stock faible.</p>
+    @else
+        <p>Stock disponible.</p>
+    @endif
     <p>Produits : {{ $products }}</p>
     <p>Commandes : {{ $orders }}</p>
     <p>Ville : {{ $city }}</p>
