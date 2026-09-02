@@ -11,11 +11,15 @@ class HomeController extends Controller
         $clients = 134;
         $products = 48;
         $orders = 83;
+        $name = 'Jannie';
+        $city = 'Auxerre';
         return view('home', [
             'company'=> $company,
             'clients'=>$clients,
             'products'=>$products,
-            'orders'=>$orders
+            'orders'=>$orders,
+            'name' => $name,
+            'city' => $city
         ]);
     }
 }
