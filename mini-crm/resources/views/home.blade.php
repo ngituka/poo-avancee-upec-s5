@@ -19,7 +19,7 @@
     </select>
 
     <p>Clients : {{ $clients }}</p>
-    <p>Produits : {{ $produits }}</p>
+    <p>Produits : {{ $products }}</p>
     <p>Commandes : {{ $orders }}</p>
 </body>
 </html>
