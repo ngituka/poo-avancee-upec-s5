@@ -18,7 +18,7 @@
         <option value="spider">Araignée</option>
     </select>
 
-    @if($clients > 0)
+    @if($nbclients > 0)
         <p>Vous avez des clients.</p>
     @else
         <p>Aucun client.</p>
@@ -28,8 +28,22 @@
     @else
         <p>Stock disponible.</p>
     @endif
-    <p>Produits : {{ $products }}</p>
+    <p>Produits : {{ $nbproducts }}</p>
     <p>Commandes : {{ $orders }}</p>
     <p>Ville : {{ $city }}</p>
+
+    <p><b>Clients : </b></p>
+    @foreach($clients as $client)
+        <p>{{ $client }}</p>
+    @endforeach
+
+    @if ($nbproducts>0)
+        <p><b>Produits :</b></p>
+        <ul>
+        @foreach ($products as $p)
+            <li>{{ $p }}</li>
+        @endforeach
+    @endif
+
 </body>
 </html>
