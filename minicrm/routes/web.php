@@ -33,3 +33,7 @@ Route::get('/about', [AboutController::class, 'index']);
 
 use App\Http\Controllers\ClientsController;
 Route::get('/clients', [ClientsController::class, 'index']);
+
+//Route produits
+use App\Http\Controllers\ProductController;
+Route::get('/products', [ProductController::class, 'index']);
